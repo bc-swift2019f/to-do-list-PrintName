@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="k3G-cF-EY2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--To Do List-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fad-NF-2Iq">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="STv-qc-VNn">
@@ -29,9 +29,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="28R-xd-lm6" kind="show" id="EmL-hK-Qtl"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -45,105 +42,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="To Do List" id="dEK-bh-cbp">
-                        <barButtonItem key="leftBarButtonItem" title="Edit" id="vnd-ie-Crg"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="zUi-3c-XqR">
-                            <connections>
-                                <segue destination="uq4-yK-bkU" kind="presentation" identifier="AddItem" id="M91-4g-zg3"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Fad-NF-2Iq" id="DHU-Se-aha"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="112.5"/>
-        </scene>
-        <!--Detail View Controller-->
-        <scene sceneID="lmq-rJ-rcp">
-            <objects>
-                <viewController id="28R-xd-lm6" customClass="DetailViewController" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="GR3-SD-hLg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To Do Item:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uts-lB-Ij4">
-                                <rect key="frame" x="20" y="198" width="374" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter To Do Item Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J8a-O2-eV3">
-                                <rect key="frame" x="20" y="237" width="374" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="J8a-O2-eV3" firstAttribute="leading" secondItem="rFj-50-W70" secondAttribute="leading" constant="20" id="6Qg-8a-gkg"/>
-                            <constraint firstItem="Uts-lB-Ij4" firstAttribute="leading" secondItem="rFj-50-W70" secondAttribute="leading" constant="20" id="I1j-Te-JSx"/>
-                            <constraint firstItem="J8a-O2-eV3" firstAttribute="top" secondItem="Uts-lB-Ij4" secondAttribute="bottom" constant="10" id="Sfo-DL-gHv"/>
-                            <constraint firstItem="rFj-50-W70" firstAttribute="trailing" secondItem="Uts-lB-Ij4" secondAttribute="trailing" constant="20" id="bec-eD-Lp0"/>
-                            <constraint firstItem="rFj-50-W70" firstAttribute="trailing" secondItem="J8a-O2-eV3" secondAttribute="trailing" constant="20" id="eZe-wc-9Pp"/>
-                            <constraint firstItem="Uts-lB-Ij4" firstAttribute="top" secondItem="rFj-50-W70" secondAttribute="top" constant="110" id="syA-mZ-53A"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="rFj-50-W70"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="x6v-06-o7i">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="N6N-Dn-hNd">
-                            <connections>
-                                <action selector="cancelPressed:" destination="28R-xd-lm6" id="u08-O2-Rig"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="Uob-Fl-qnZ"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ict-y1-nLP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2755.072463768116" y="112.5"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="zv9-xB-OgQ">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="k3G-cF-EY2" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iaz-gw-BRU">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="yPk-zY-DUj"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1iB-X7-TuQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
             <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="ph8-rG-gdl">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uq4-yK-bkU" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vEp-lM-irf">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="28R-xd-lm6" kind="relationship" relationship="rootViewController" id="kkd-0I-2Tj"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="isX-aD-gZ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1884" y="486"/>
-        </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="kkd-0I-2Tj"/>
-    </inferredMetricsTieBreakers>
 </document>
