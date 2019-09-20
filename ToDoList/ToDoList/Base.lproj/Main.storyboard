@@ -85,7 +85,11 @@
                                 <rect key="frame" x="20" y="237" width="374" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="toDoFieldChanged:" destination="28R-xd-lm6" eventType="editingChanged" id="DgD-s5-jXy"/>
+                                    <action selector="toDoFieldChanged:" destination="28R-xd-lm6" eventType="editingDidEnd" id="mmX-l7-RNq"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -112,6 +116,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="saveBarButton" destination="Uob-Fl-qnZ" id="AV0-Aa-A8n"/>
                         <outlet property="toDoField" destination="J8a-O2-eV3" id="w7w-2G-gB9"/>
                     </connections>
                 </viewController>
